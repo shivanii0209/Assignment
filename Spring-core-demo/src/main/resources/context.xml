@@ -1,0 +1,371 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<context:annotation-config></context:annotation-config>
+
+<!-- 
+<bean id="product" class = "com.zensar.Product">
+
+<property name="productId" value="1"></property>
+<property name="productName" value ="Laptop"></property>
+<property name="productCost" value = "45000"></property>
+</bean >
+-->
+<!--
+<bean id ="pro2" class = "com.zensar.Product">
+<constructor-arg index="2">
+<value type="int">200000</value >
+</constructor-arg>
+<constructor-arg index = "1">
+<value>Car</value>
+</constructor-arg>
+<constructor-arg index="0">
+<value type="int">5</value>
+</constructor-arg>
+</bean>
+-->
+
+<!--ByType-->
+
+
+<!--
+
+<bean id ="student" class= "com.zensar.Student" autowire="byType" >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>
+// <property name="address" ref="add"></property>
+
+</bean>
+<bean id ="address" class="com.zensar.Address" autowire-candidate="false">
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+
+<bean id ="address1" class="com.zensar.Address">
+<property name="state" value="Maha"></property>
+<property name="city" value="Solapur"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+
+	-->
+	
+	
+<!--  Constructor 
+<bean id ="student" class= "com.zensar.Student" autowire="constructor" >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+	
+	</bean>
+<bean id ="address" class="com.zensar.Address" autowire-candidate="false">
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+
+<bean id ="address1" class="com.zensar.Address">
+<property name="state" value="Maha"></property>
+<property name="city" value="Solapur"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+	
+-->
+<!-- QUALIFIER 
+<bean id ="student" class= "com.zensar.Student"  >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+	
+	</bean>
+<bean id ="address" class="com.zensar.Address" >
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+
+
+<bean id ="address1" class="com.zensar.Address">
+<property name="state" value="Maha"></property>
+<property name="city" value="Solapur"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+</beans>
+-->
+<!-- LIST 
+<bean id ="student" class= "com.zensar.Student"  >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+<property name="address">
+<list>
+
+<ref bean="address"/>
+<ref bean="address1"/>
+
+</list>
+
+</property>
+	
+	</bean>
+<bean id ="address" class="com.zensar.Address" >
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+
+
+<bean id ="address1" class="com.zensar.Address">
+<property name="state" value="Maha"></property>
+<property name="city" value="Solapur"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+-->
+<!-- MAP
+<bean id ="student" class= "com.zensar.Student"  >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+<property name="address">
+<map>
+
+<entry key ="1" value-ref="address"/>
+<entry key ="2" value-ref="address1"/>
+</map>
+
+
+</property>
+	
+	</bean>
+<bean id ="address" class="com.zensar.Address" >
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+
+
+<bean id ="address1" class="com.zensar.Address">
+<property name="state" value="Maha"></property>
+<property name="city" value="Solapur"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+-->
+<!-- SET
+<bean id ="student" class= "com.zensar.Student"  >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+<property name="address">
+<set>
+
+<ref bean="address"/>
+<ref bean="address1"/>
+
+</set>
+
+</property>
+	
+	</bean>
+<bean id ="address" class="com.zensar.Address" >
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+
+
+<bean id ="address1" class="com.zensar.Address">
+<property name="state" value="Maha"></property>
+<property name="city" value="Solapur"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+-->
+<!-- 
+<bean id ="student" class= "com.zensar.Student"  >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+<property name="address">
+<map>
+
+<entry key-ref ="address" value="1"/>
+<entry key-ref ="address1" value="2"/>
+</map>
+
+
+</property>
+	
+	</bean>
+<bean id ="address" class="com.zensar.Address" >
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+
+
+<bean id ="address1" class="com.zensar.Address">
+<property name="state" value="Maha"></property>
+<property name="city" value="Solapur"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+-->
+<!-- 
+<bean id ="student" class= "com.zensar.Student" abstract="false"  >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+<property name="address">
+<map>
+
+<entry key-ref ="address" value="1"/>
+<entry key-ref ="address1" value="2"/>
+</map>
+</property>
+<property name="properties">
+<props>
+<prop key="name"> Shivani</prop>
+<prop key="age">22</prop>
+</props>
+</property>
+	
+	</bean>
+	<bean id="s2" parent = "student">
+	<property name="StudentAge" value="32">
+	</property>
+	</bean>
+	
+<bean id ="address" class="com.zensar.Address" >
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+
+
+<bean id ="address1" class="com.zensar.Address">
+<property name="state" value="Maha"></property>
+<property name="city" value="Solapur"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+-->
+<!--ABSTRACT 
+<bean id ="student" class= "com.zensar.Student" abstract="true"  >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+<property name="address">
+<map>
+<entry key-ref ="address" value="1"/>
+<entry key-ref ="address1" value="2"/>
+</map>
+</property>
+<property name="properties">
+<props>
+<prop key="name"> Shivani</prop>
+<prop key="age">22</prop>
+</props>
+</property>
+	</bean>
+	<bean id="s2" parent ="student">
+	<property name="StudentAge" value="32">
+	</property>
+	</bean>
+	
+<bean id ="address" class="com.zensar.Address" >
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+<bean id ="address1" class="com.zensar.Address">
+<property name="state" value="Maha"></property>
+<property name="city" value="Solapur"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+-->
+<!-- INNER BEAN
+<bean id ="student" class= "com.zensar.Student"  >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+<property name="address">
+<bean id ="addr1" class="com.zensar.Address" >
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+</property>
+</bean>
+-->
+<!-- INIT METHOD
+<bean id ="student" class= "com.zensar.Student"  init-method="myInit">
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+<property name="address">
+<bean id ="addr1" class="com.zensar.Address" >
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+</property>
+</bean>
+-->
+<!--
+<bean id ="student" class= "com.zensar.Student"  init-method="myInit" destroy-method ="myDestroy" >
+<property name="StudentId" value = "12"></property>
+<property name="StudentName" value="Shivani"></property>
+<property name="StudentAge" value="27"></property>	
+<property name="address">
+<bean id ="addr1" class="com.zensar.Address" >
+<property name="state" value="Maha"></property>
+<property name="city" value="Pune"></property>
+<property name="Pincode" value="411048"></property>
+</bean >
+</property>
+</bean>
+ -->
+ <!-- 
+ <context:component-scan base-package="com.zensar"></context:component-scan>
+ 
+<context:property-placeholder location="data.properties"/>
+
+-->
+<!-- 
+<context:property-placeholder location="data.properties"/>
+<bean id ="student" class= "com.zensar.Student" >
+<property name="StudentId" value = "${id}"></property>
+<property name="StudentName" value="${name}"></property>
+<property name="StudentAge" value="${age}"></property>	
+</bean>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>
+
+
+
+
+
+
