@@ -1,0 +1,19 @@
+#spring.datasource.url=jdbc:mysql://localhost:3306/javabatch
+#spring.datasource.username=root
+#spring.datasource.password=Krishiv@05
+#spring.jpa.hibernate.ddl-auto=create
+server:
+  port: 9999
+spring:
+  datasource:
+    url:  jdbc:mysql://localhost:3306/javabatch
+    username: root
+    password: Krishiv@05
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        
