@@ -14,8 +14,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Data
-@NoArgsConstructor
+
 @NamedQueries(value= {@NamedQuery(name="Coupon.com" ,query="from Coupon c where c.couponCode=?1"),
 @NamedQuery(name="Coupon.com1",query="from Coupon c where c.couponCode=?1 and c.couponId=?2")})
 //@NamedQuery(name="Coupon.com" ,query="from Coupon c where c.couponCode=?1")
